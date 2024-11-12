@@ -23,16 +23,13 @@ let dataAxis = []
 let data = []
 async function loadData(){
     delayStatusData.value = await fetchDelayStatus(`${import.meta.env.VITE_BACKEND_URL}/delay-status`);
-    console.log('Delay Status = ', delayStatusData.value);
    
     for( i = 0; i < 9 ; i++){
         splittedAirline.value = delayStatusData.value[i].AIRLINE_1.split(' ')[0]
-        console.log('splitted==', splittedAirline.value );
         dataAxis.push(splittedAirline.value )
         data.push(delayStatusData.value[i].Late_Arrivals)
     }
-    console.log('x-axis data = ', dataAxis);
-    console.log('y-axis data = ', data);
+    
     
 }
 
@@ -49,9 +46,14 @@ const graphOfDelayStatus = async() => {
     text: 'Delay Status of airlines',
     padding: 20,
     left: 'center',
-  
-
   },
+  grid: {
+      left: '5%',     // Adjust this value to increase/decrease space on the left
+      right: '1%',    // Adjust this to remove extra space on the right
+      top: '15%',     // Adjust top space if necessary
+      bottom: '15%',  // Adjust bottom space if necessary
+      containLabel: true,  // Ensures labels are contained within the grid
+    },
   xAxis: {
     data: dataAxis,
     show:true,
@@ -164,16 +166,16 @@ onMounted(async() => {
 </script>
 <template>
 
-    <div class="tw-flex tw-flex-col tw-justify-center tw-items-center tw-pt-10">
-        <div class="tw-m-3 tw-flex-col tw-bg-white tw-text-[#1d7474] tw-flex tw-w-full tw-items-center tw-justify-center tw-rounded-2xl tw-shadow-2xl md:tw-w-[900px] tw-gap-3">
-            <span class="tw-text-lg tw-font-semibold tw-pt-6 tw-px-6">Graph Showing Number of Flights Delayed  by the airline 
+    <div class="tw-flex tw-flex-col tw-justify-center tw-w-full tw-items-center tw-pt-10">
+        <div class="tw-m-3 tw-flex-col tw-bg-white tw-text-[#1d7474] tw-flex tw-w-[97%]  lg:tw-w-[900px] md:tw-w-[750px] tw-items-center tw-justify-center tw-rounded-2xl tw-shadow-2xl  tw-gap-3">
+            <span class="sm:tw-text-lg tw-text-base tw-font-semibold tw-pt-6 tw-px-6">Graph Showing Number of Flights Delayed  by the airline 
             <span class="tw-text-[#FF7F50]">Southwest Airlines Inc. </span>has <span class="tw-text-[#FF7F50]">largest</span> number of delayed flights, on the contrary  <span class="tw-text-[#FF7F50]">Virgin Airlines Inc. </span> has  <span class="tw-text-[#FF7F50]">smallest</span> number of delayed flights </span>
             <span class="tw-block tw-font-bold tw-text-2xl">***</span>
         </div>
         <div
-               class="tw-m-3 tw-bg-white tw-text-[#1d7474] tw-flex tw-w-full tw-items-center tw-justify-center tw-rounded-2xl tw-shadow-2xl md:tw-w-[900px]">
+               class="tw-m-3 tw-bg-white tw-text-[#1d7474] tw-flex tw-w-[97%] tw-items-center tw-justify-center tw-rounded-2xl tw-shadow-2xl md:tw-w-[750px] lg:tw-w-[900px]">
                <v-chart
-                  class="tw-h-[340px] md:tw-h-[450px]"
+                  class="tw-h-[340px] md:tw-h-[390px] lg:tw-h-[440px] tw-w-11/12  xs:tw-w-[440px] sm:tw-w-[630px] md:tw-w-full"
                   :option="delayStatusOptions"></v-chart>
             </div>
     </div>

@@ -2,6 +2,7 @@
 import Navbar from '@/layout/Navbar.vue'
 import FlightsPerAirline from '@/components/FlightsPerAirline.vue'
 import DelayStatus from '@/components/DelayStatus.vue'
+import AirlinesStatewise from '../../components/AirlinesStatewise.vue'
 
 
 </script>
@@ -9,8 +10,8 @@ import DelayStatus from '@/components/DelayStatus.vue'
 <template>
    <div class="main_container tw-flex tw-flex-col tw-select-none">
   
-      <div class="bghero2 tw-h-[132vh] tw-w-full tw-bg-cover tw-bg-fixed tw-bg-no-repeat">
-  <div class="tw-w-full tw-h-[132vh] tw-flex tw-flex-col tw-items-center tw-bg-gradient-to-bl tw-from-[#ffffff9b] tw-to-[#0000006f]">
+      <div class="bghero2 tw-h-[132vh] md:tw-h-[142vh] tw-w-full tw-bg-cover tw-bg-fixed tw-bg-no-repeat">
+  <div class="tw-w-full tw-h-[132vh] md:tw-h-[142vh] tw-flex tw-flex-col tw-items-center tw-bg-gradient-to-bl tw-from-[#ffffff9b] tw-to-[#0000006f]">
    <Navbar />
 <DelayStatus  />
    
@@ -19,8 +20,8 @@ import DelayStatus from '@/components/DelayStatus.vue'
 </div>
 
       <div
-         class="bghero tw-h-[120vh] tw-w-full tw-bg-red-50 tw-bg-cover tw-bg-fixed tw-bg-no-repeat">
-         <div class="tw-w-full tw-h-[120vh]  tw-bg-gradient-to-bl tw-to-[#ffffff9b] tw-from-[#0000006f]">
+         class="bghero tw-h-[120vh] md:tw-h-[130vh] tw-w-full tw-bg-red-50 tw-bg-cover tw-bg-fixed tw-bg-no-repeat">
+         <div class="tw-w-full tw-h-[120vh] md:tw-h-[130vh] tw-bg-gradient-to-bl tw-to-[#ffffff9b] tw-from-[#0000006f]">
              <!-- # Page 2 -->
              <FlightsPerAirline />
          </div>
@@ -28,10 +29,10 @@ import DelayStatus from '@/components/DelayStatus.vue'
       </div>
 
       <div
-         class="bghero3 tw-h-[120vh] tw-w-full tw-bg-red-50 tw-bg-cover tw-bg-fixed tw-bg-no-repeat">
-         <div class="tw-w-full tw-h-[120vh] tw-bg-gradient-to-bl tw-from-[#ffffff9b] tw-to-[#0000006f]">
+         class="bghero3 tw-h-[120vh] md:tw-h-[130vh] tw-w-full tw-bg-red-50 tw-bg-cover tw-bg-fixed tw-bg-no-repeat">
+         <div class="tw-w-full tw-h-[120vh] md:tw-h-[130vh]  tw-flex tw-justify-center tw-items-center  tw-bg-gradient-to-bl tw-from-[#ffffff9b] tw-to-[#0000006f]">
              <!-- # Page 3 -->
-             i am vidu 3
+           <AirlinesStatewise />
          </div>
       </div>
    </div>

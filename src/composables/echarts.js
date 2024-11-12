@@ -1,6 +1,6 @@
 import { use } from 'echarts/core'
 import { BarChart } from 'echarts/charts'
-import { LineChart } from 'echarts/charts'
+import { LineChart,PieChart } from 'echarts/charts'
 
 import {
   DatasetComponent,
@@ -9,7 +9,8 @@ import {
   TooltipComponent,
   TitleComponent,
   ToolboxComponent,
-  DataZoomComponent
+  DataZoomComponent,
+  LegendComponent
 } from 'echarts/components'
 import { SVGRenderer } from 'echarts/renderers'
 
@@ -27,6 +28,8 @@ export function setupEcharts(){
         LineChart,
       ])      
 }
+
+
 
 
 

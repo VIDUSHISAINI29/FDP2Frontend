@@ -8,12 +8,13 @@
         <div  class="tw-cursor-pointer">
       <img class="tw-w-16 tw-h-12 tw-rounded-md" src="/Images/flightlogo.png" alt="">   
       </div>
-        <div class=" tw-flex tw-gap-10  ">
+        <div class=" md:tw-flex  tw-hidden tw-gap-10">
             <span class="tw-cursor-pointer"> Home</span>
             <span class="tw-cursor-pointer"> About Us</span>
             <span class="tw-cursor-pointer"> Contact Us</span>
         </div>
-        <div class="tw-w-20 tw-flex tw-items-center tw-justify-center tw-rounded-md tw-p-1 tw-bg-gradient-to-b tw-from-[#fe8f5a] tw-to-[#e1570f]"><span class="tw-cursor-pointer">Logout</span></div>
+        <div class="tw-w-20 md:tw-flex  tw-hidden tw-items-center tw-justify-center tw-rounded-md tw-p-1 tw-bg-gradient-to-b tw-from-[#fe8f5a] tw-to-[#e1570f]"><span class="tw-cursor-pointer">Logout</span></div>
+        <div></div>
       </div>
      
    </div>
