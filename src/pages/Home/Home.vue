@@ -3,6 +3,7 @@ import Navbar from '@/layout/Navbar.vue'
 import FlightsPerAirline from '@/components/FlightsPerAirline.vue'
 import DelayStatus from '@/components/DelayStatus.vue'
 import AirlinesStatewise from '../../components/AirlinesStatewise.vue'
+import Footer from '@/layout/Footer.vue'
 
 
 </script>
@@ -12,6 +13,7 @@ import AirlinesStatewise from '../../components/AirlinesStatewise.vue'
   
       <div class="bghero2 tw-h-[132vh] md:tw-h-[142vh] tw-w-full tw-bg-cover tw-bg-fixed tw-bg-no-repeat">
   <div class="tw-w-full tw-h-[132vh] md:tw-h-[142vh] tw-flex tw-flex-col tw-items-center tw-bg-gradient-to-bl tw-from-[#ffffff9b] tw-to-[#0000006f]">
+
    <Navbar />
 <DelayStatus  />
    
@@ -35,8 +37,9 @@ import AirlinesStatewise from '../../components/AirlinesStatewise.vue'
            <AirlinesStatewise />
          </div>
       </div>
+      <Footer />
    </div>
-   <router-view/>
+ 
 </template>
 
 <style scoped>
@@ -47,6 +50,6 @@ import AirlinesStatewise from '../../components/AirlinesStatewise.vue'
    background-image: url("/Images/oneFlight.jpg");
 }
 .bghero3 {
-   background-image: url("/Images/manyFlights.jpg");
+   background-image: url("/Images/flight3.webp");
 }
 </style>

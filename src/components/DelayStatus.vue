@@ -48,7 +48,7 @@ const graphOfDelayStatus = async() => {
     left: 'center',
   },
   grid: {
-      left: '5%',     // Adjust this value to increase/decrease space on the left
+      left: '9%',     // Adjust this value to increase/decrease space on the left
       right: '1%',    // Adjust this to remove extra space on the right
       top: '15%',     // Adjust top space if necessary
       bottom: '15%',  // Adjust bottom space if necessary
