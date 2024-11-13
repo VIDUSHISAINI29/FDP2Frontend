@@ -34,10 +34,10 @@ function displayMenubarFalse() {
                      Details
                   </router-link>
                 
-                  <span
+                  <a href="#sectionContacts"
                      class="tw-w-full tw-border-b-2 tw-border-[#156355] tw-p-2 tw-text-center tw-text-lg tw-font-bold tw-leading-none tw-text-[#156355] sm:tw-text-xl">
                      Contact Us
-                  </span>
+                  </a>
 
                   <button
                      @click="logout"
@@ -65,7 +65,7 @@ function displayMenubarFalse() {
          <div class="tw-hidden tw-gap-10 md:tw-flex">
             <router-link to="/home" @click="add" class="tw-cursor-pointer">Home</router-link>
             <router-link to="/details" class="tw-cursor-pointer">Details</router-link>
-            <a class="tw-cursor-pointer" href="#contact-us">Contact Us</a>
+            <a class="tw-cursor-pointer" href="#sectionContacts">Contact Us</a>
          </div>
          <div
             class="tw-hidden tw-w-20 tw-items-center tw-justify-center tw-rounded-md tw-bg-gradient-to-b tw-from-[#fe8f5a] tw-to-[#e1570f] tw-p-1 md:tw-flex">

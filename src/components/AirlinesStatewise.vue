@@ -3,7 +3,7 @@ import { onMounted, ref } from 'vue';
 import axios from "axios"
 import { color } from 'echarts';
 
-
+const chartInstance = ref(null);
 const airlinesStateWise = ref(null);
 const optionsAirlinesStateWise = ref(null);
 
