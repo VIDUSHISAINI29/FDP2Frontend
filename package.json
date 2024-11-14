@@ -12,6 +12,7 @@
       "@auth0/auth0-vue": "^2.3.3",
       "@emailjs/browser": "^4.4.1",
       "@primevue/themes": "^4.0.4",
+      "auth0": "^4.13.0",
       "axios": "^1.7.7",
       "dayjs": "^1.11.13",
       "dotenv": "^16.4.5",

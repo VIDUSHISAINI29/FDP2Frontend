@@ -1,5 +1,10 @@
 <script setup>
 import { useGlobalStore } from "@/stores/global";
+import { useAuth0 } from '@auth0/auth0-vue';
+import { useRouter } from 'vue-router';
+
+const auth0 = useAuth0();
+const router = useRouter();
 const global = useGlobalStore();
 function displayMenubar() {
    global.isMenuBarVisible = !global.isMenuBarVisible;
@@ -8,6 +13,20 @@ function displayMenubar() {
 function displayMenubarFalse() {
    global.isMenuBarVisible = false;
    console.log(global.isMenuBarVisible);
+}
+
+function logout() {
+  auth0.logout({
+    logoutParams: {
+      returnTo: window.location.origin
+    }
+  }).then(() => {
+    router.push('/log-in'); // Or wherever you want to redirect after logout
+  }).catch((error) => {
+    console.log('Logout error:', error);
+  });
+
+  console.log('Logout function triggered');
 }
 </script>
 
@@ -69,7 +88,7 @@ function displayMenubarFalse() {
          </div>
          <div
             class="tw-hidden tw-w-20 tw-items-center tw-justify-center tw-rounded-md tw-bg-gradient-to-b tw-from-[#fe8f5a] tw-to-[#e1570f] tw-p-1 md:tw-flex">
-            <span class="tw-cursor-pointer">Logout</span>
+            <span @click="logout" class="tw-cursor-pointer">Logout</span>
          </div>
          <div @click="displayMenubar" class="tw-flex md:tw-hidden">
             <i class="ri-menu-3-line tw-text-3xl tw-text-[#FF7F50]"></i>
